@@ -25,3 +25,32 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+/* 360 image slider */
+.custom-hotspot {
+  border: none !important;
+  background: none !important;
+  transition: none !important;
+  cursor: pointer !important;
+}
+
+.custom-hotspot::before {
+  background-image: url(/images/panorama/pano_spot.png) !important;
+  background-color: transparent !important;
+  background-size: 26px !important;
+  box-shadow: none !important;
+  animation: none !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.cloudimage-360-hotspot-popup {
+  display: none !important;
+}
+
+/*.cloudimage-360 canvas {*/
+/*  width: auto !important;*/
+/*  max-height: 100vh !important;*/
+/*  margin: 0 auto;*/
+/*}*/

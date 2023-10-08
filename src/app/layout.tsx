@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <nav className={'fixed top-0 left-0 w-full z-10 py-2 bg-opacity-50 bg-black'}>
+        <ul className={'flex justify-center gap-x-5 p-2 text-xs md:text-sm'}>
+          <li>
+            <Link href={'/panorama-slider'}>360 Slider</Link>
+          </li>
+          <li>
+            <Link href={'/vr'}>VR (Cubemap)</Link>
+          </li>
+          <li>
+            <Link href={'/2d-slider'}>2D Slider</Link>
+          </li>
+          <li>
+            <Link href={'/image-comparison'}>Image Comparison</Link>
+          </li>
+        </ul>
+      </nav>
+      {children}
+      </body>
     </html>
   )
 }
